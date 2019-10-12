@@ -26,7 +26,7 @@ s_a[2]="Banfora|Ouagadougou|Bobo-Dioulasso|Pô|Manga|Boulgou|Ouahigouya|Comoe|Ga
 s_a[3]="Bamako|Gao|Kayes|Kidal|Koulikoro|Mopti|Segou|Sikasso|Tombouctou";
 s_a[4]="Abomey-Calavi|Cotonou|Porto-Novo|Parakou|Comè|Bembéréké|Donga|Littoral|Mono|Oueme|Plateau|Zou";
 s_a[5]="Beyla|Boffa|Boke|Conakry|Coyah|Dabola|Dalaba|Dinguiraye|Dubreka|Faranah|Forecariah|Fria|Gaoual|Gueckedou|Kankan|Kerouane|Kindia|Kissidougou|Koubia|Koundara|Kouroussa|Labe|Lelouma|Lola|Macenta|Mali|Mamou|Mandiana|Nzerekore|Pita|Siguiri|Telimele|Tougue|Yomou";
-s_a[5]="Ashanti|Brong-Ahafo|Central|Eastern|Greater Accra|Northern|Upper East|Upper West|Volta|Western";
+s_a[6]="Ashanti|Brong-Ahafo|Central|Eastern|Greater Accra|Northern|Upper East|Upper West|Volta|Western";
 s_a[7]="Bomi|Bong|Grand Bassa|Grand Cape Mount|Grand Gedeh|Grand Kru|Lofa|Margibi|Maryland|Montserrado|Nimba|River Cess|Sinoe";
 s_a[8]="Lomé|Sokodé";
 
