@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'nan_register.apps.NanRegisterConfig',
     'django_admin_generator',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -117,7 +118,9 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+DRF_DYNAMIC_FIELDS = {
+'SUPPRESS_CONTEXT_WARNING': True,
+}
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
