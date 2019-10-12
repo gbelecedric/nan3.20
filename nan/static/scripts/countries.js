@@ -1,6 +1,6 @@
 
 var country_arr = new Array(
-	"Cote d'Ivoire",
+	"Côte d'Ivoire",
 	"Burkina Faso",
 	"Mali", 
 	"Benin", 

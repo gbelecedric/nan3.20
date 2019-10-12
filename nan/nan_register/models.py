@@ -54,6 +54,7 @@ class Profile(models.Model):
     ville = models.ForeignKey(Ville, on_delete=models.CASCADE, related_name='ville_etudiant', blank=True, null=True)
     commune = models.ForeignKey(Commune, on_delete=models.CASCADE, related_name='commune_etudiant', blank=True, null=True)
     contacts = models.CharField(max_length=30)
+    genre = models.CharField(max_length=30, blank=True, null=True)
     image = models.ImageField(upload_to='profile/', default='useravatar.png')
     birth_date = models.DateField(blank=True, null=True)
     statut = models.BooleanField(default=True)

@@ -1,101 +1,103 @@
 {% extends "bases/base_home.html" %}
 
 {% block content %}
-    
-<section class="fdb-block" style="background-image: url(https://cdn.pixabay.com/photo/2015/06/24/16/36/office-820390_1280.jpg);">
-    <div class="container">
-        <div class="row justify-content-center">
-        <div class="col-12 col-md-8 col-lg-7 col-md-5 text-center">
-            <div class="fdb-box fdb-touch">
-            <div class="row">
-                <div class="col">
-                <h1>Register</h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col mt-4">
-                <input type="text" class="form-control" placeholder="Nom">
-                </div>
-                <div class="col mt-4">
-                    <input type="text" class="form-control" placeholder="Prénoms">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col mt-4">
-                    <input type="text" class="form-control" placeholder="Email">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col mt-4">
-                    <div class="input-group mb-3">
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="inputGroupFile02">
-                            <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choisir une image </label>
-                        </div>
-                        <div class="input-group-append">
-                            <span class="input-group-text" id="inputGroupFileAddon02">Télécharger</span>
-                        </div>
-                        </div>
-                </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col">
-                    <select class="form-control" id="country" name ="country"></select>
-                </div>
-            </div>
-        
-            <div class="row">
-                <div class="col mt-4">
-                    <select class="form-control" name ="state" id ="state"></select>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col mt-4">
-                    <select class="form-control">
-                        <option>Commune</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col mt-4">
-                    <input type="tel" class="form-control" placeholder="Phone">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col mt-4">
-                    <input type="date" class="form-control" placeholder="Date de naissance">
-                </div>
-                <div class="col mt-4">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1">Homme</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                        <label class="form-check-label" for="inlineRadio2">Femme</label>
+
+    <section class="fdb-block" style="background-image: url(https://cdn.pixabay.com/photo/2015/06/24/16/36/office-820390_1280.jpg);">
+        <div class="container">
+            <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-7 col-md-5 text-center">
+                <div class="fdb-box fdb-touch">
+                <div class="row">
+                    <div class="col">
+                    <h1>Register</h1>
                     </div>
                 </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col">
-                <input type="password" class="form-control mb-1" placeholder="Password">
+                <div class="row">
+                    <div class="col mt-4">
+                    <input v-model="nom" type="text" class="form-control" placeholder="Nom">
+                    </div>
+                    <div class="col mt-4">
+                        <input v-model="prenoms" type="text" class="form-control" placeholder="Prénoms">
+                    </div>
                 </div>
-                <div class="col">
-                    <input type="password" class="form-control mb-1" placeholder="Confirmer mot de passe">
+                <div class="row">
+                    <div class="col mt-4">
+                        <input v-model="email" type="text" class="form-control" placeholder="Email">
+                    </div>
                 </div>
-            </div>
-                    
-            <div class="row mt-4">
-                <div class="col">
-                <button class="btn btn-primary" type="button">Submit</button>
-                <p class="text-right"><a href="https://www.froala.com">Already have an account?</a></p>
+                <div class="row">
+                    <div class="col mt-4">
+                        <div class="input-group mb-3">
+                            <div class="custom-file">
+                                <input type="file" ref="file" v-on:change="handleFileUpload()" class="custom-file-input" id="inputGroupFile02">
+                                <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choisir une image </label>
+                            </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col">
+                        <select v-model="pays" class="form-control" id="country" ></select>
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <div class="col mt-4">
+                        <select v-model="ville" class="form-control" id ="state"></select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mt-4">
+                        <select v-model="commune" class="form-control">
+                            <option 
+                                v-for="item in communes"
+                                v-bind:items="item"
+                                v-bind:key="item.id"
+                            >${ item.nom }</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mt-4">
+                        <input v-model="phone" type="tel" class="form-control" placeholder="Phone">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mt-4">
+                        <input v-model="naissance" type="date" class="form-control" placeholder="Date de naissance">
+                    </div>
+                    <div class="col mt-4">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" v-model="select" id="inlineRadio1" value="1">
+                            <label class="form-check-label" for="inlineRadio1">Homme</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" v-model="select" id="inlineRadio2" value="2">
+                            <label class="form-check-label" for="inlineRadio2">Femme</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col">
+                    <input v-model="password" type="password" class="form-control mb-1" placeholder="Password">
+                    </div>
+                    <div class="col">
+                        <input v-model="passwordconf" type="password" class="form-control mb-1" placeholder="Confirmer mot de passe">
+                    </div>
+                </div>
+                        
+                <div class="row mt-4">
+                    <div class="col">
+                    <button v-if="!spinner" class="btn btn-primary" v-on:click="submitFile" type="button">Submit</button>
+                    <div v-if="spinner" class="lds-ripple"><div></div><div></div></div>
+                    <p class="text-right"><a href="https://www.froala.com">Already have an account?</a></p>
+                    </div>
+                </div>
                 </div>
             </div>
             </div>
         </div>
-        </div>
-    </div>
-</section>
+    </section>
 
 {% endblock content %}
     
