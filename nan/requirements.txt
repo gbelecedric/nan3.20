@@ -12,3 +12,4 @@ six==1.12.0
 sqlparse==0.3.0
 pillow
 djangorestframework
+drf_dynamic_fields
