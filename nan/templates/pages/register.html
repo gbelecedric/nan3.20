@@ -1,0 +1,104 @@
+{% extends "bases/base_home.html" %}
+
+{% block content %}
+    
+<section class="fdb-block" style="background-image: url(https://cdn.pixabay.com/photo/2015/06/24/16/36/office-820390_1280.jpg);">
+    <div class="container">
+        <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-7 col-md-5 text-center">
+            <div class="fdb-box fdb-touch">
+            <div class="row">
+                <div class="col">
+                <h1>Register</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mt-4">
+                <input type="text" class="form-control" placeholder="Nom">
+                </div>
+                <div class="col mt-4">
+                    <input type="text" class="form-control" placeholder="Prénoms">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mt-4">
+                    <input type="text" class="form-control" placeholder="Email">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mt-4">
+                    <div class="input-group mb-3">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputGroupFile02">
+                            <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choisir une image </label>
+                        </div>
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="inputGroupFileAddon02">Télécharger</span>
+                        </div>
+                        </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col">
+                    <select class="form-control">
+                        <option>Pays</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mt-4">
+                    <select class="form-control">
+                        <option>Ville</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mt-4">
+                    <select class="form-control">
+                        <option>Commune</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mt-4">
+                    <input type="tel" class="form-control" placeholder="Phone">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mt-4">
+                    <input type="date" class="form-control" placeholder="Date de naissance">
+                </div>
+                <div class="col mt-4">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Homme</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">Femme</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col">
+                <input type="password" class="form-control mb-1" placeholder="Password">
+                </div>
+                <div class="col">
+                    <input type="password" class="form-control mb-1" placeholder="Confirmer mot de passe">
+                </div>
+            </div>
+                    
+            <div class="row mt-4">
+                <div class="col">
+                <button class="btn btn-primary" type="button">Submit</button>
+                <p class="text-right"><a href="https://www.froala.com">Already have an account?</a></p>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}
+    
