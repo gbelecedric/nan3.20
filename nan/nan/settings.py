@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'nan_register.apps.NanRegisterConfig',
     'django_admin_generator',
     'rest_framework',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
