@@ -12,5 +12,7 @@ router.register('commune', CommuneViewSet, base_name='commune')
 
 urlpatterns = [
     path('', views.register, name='register'),
+    path('postregister', views.registers, name='register'),
+
 ]
 urlpatterns += router.urls

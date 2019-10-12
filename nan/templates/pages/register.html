@@ -29,30 +29,31 @@
                     <div class="col mt-4">
                         <div class="input-group mb-3">
                             <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="inputGroupFile02">
+                                <input type="file" ref="file" v-on:change="handleFileUpload()" class="custom-file-input" id="inputGroupFile02">
                                 <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choisir une image </label>
-                            </div>
-                            <div class="input-group-append">
-                                <span class="input-group-text" id="inputGroupFileAddon02">Télécharger</span>
                             </div>
                             </div>
                     </div>
                 </div>
                 <div class="row mt-4">
                     <div class="col">
-                        <select v-model="pays" class="form-control" id="country" name ="country"></select>
+                        <select v-model="pays" class="form-control" id="country" ></select>
                     </div>
                 </div>
             
                 <div class="row">
                     <div class="col mt-4">
-                        <select v-model="ville" class="form-control" name ="state" id ="state"></select>
+                        <select v-model="ville" class="form-control" id ="state"></select>
                     </div>
                 </div>
-                <div v-if="isabidjan" class="row">
-                    <div  class="col mt-4">
+                <div class="row">
+                    <div class="col mt-4">
                         <select v-model="commune" class="form-control">
-                            <option>Commune</option>
+                            <option 
+                                v-for="item in communes"
+                                v-bind:items="item"
+                                v-bind:key="item.id"
+                            >${ item.nom }</option>
                         </select>
                     </div>
                 </div>
