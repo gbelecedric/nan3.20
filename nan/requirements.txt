@@ -10,3 +10,5 @@ python-utils==2.3.0
 pytz==2019.3
 six==1.12.0
 sqlparse==0.3.0
+pillow
+djangorestframework
