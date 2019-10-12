@@ -9,6 +9,50 @@
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/froala-design-blocks/2.0.1/css/froala_blocks.min.css">
     <link rel="stylesheet" href="/static/owlcarousel/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="/static/owlcarousel/dist/assets/owl.theme.default.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-css/1.4.6/select2-bootstrap.min.css">
+    <script type= "text/javascript" src = "/static/scripts/countries.js"></script>
+    <style>
+        .lds-dual-ring {
+        display: inline-block;
+        width: 64px;
+        height: 64px;
+        }
+        .lds-dual-ring:after {
+        content: " ";
+        display: block;
+        width: 46px;
+        height: 46px;
+        margin: 1px;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        border-color: #631515 transparent rgb(46, 23, 23) transparent;
+        animation: lds-dual-ring 1.2s linear infinite;
+        }
+        @keyframes lds-dual-ring {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+        }
+        .btn-primary.focus, .btn-primary:focus,.btn-primary:active,
+        textarea:focus, 
+        textarea.form-control:focus, 
+        input.form-control:focus, 
+        input[type=text]:focus, 
+        input[type=password]:focus, 
+        input[type=email]:focus, 
+        input[type=number]:focus, 
+        [type=text].form-control:focus, 
+        [type=password].form-control:focus, 
+        [type=email].form-control:focus, 
+        [type=tel].form-control:focus, 
+        [contenteditable].form-control:focus {
+        box-shadow: inset 0 -1px 0 #ddd;
+        }
+    </style>
     
 </head>
 
@@ -105,6 +149,7 @@
         <script src="/static/owlcarousel/dist/owl.carousel.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js"></script>
 
         <script>
             var app =new Vue({
@@ -160,6 +205,20 @@
                 
                 }
             })
+        </script>
+        
+        <script>
+                $(document).ready(function() {
+                    $('#country').select2();
+                });
+                $(document).ready(function() {
+                    $('#state').select2();
+                });
+        </script>
+        <script language="javascript">
+            populateCountries("country", "state"); // first parameter is id of country drop-down and second parameter is id of state drop-down
+            populateCountries("country2");
+            populateCountries("country2");
         </script>
         
 
